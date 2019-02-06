@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>专家顾问文章页</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/export_art.css">
+</head>
+<body>
+
+	<include file="./Application/Home/View/head.html" />
+
+	<!-- 专家顾问banner图内容开始 -->
+	<div id="banner11">
+		<div class="banner11_img"></div>
+	</div>
+	<!-- 专家顾问banner图内容结束 -->
+
+	<!-- 专家顾问文章页主体内容 -->
+	<div id="exar">
+		<div class="exar_con">
+
+			<!-- 左边盒子 -->
+			<div class="exar_con_left">
+
+				<div class="exar_left_top">
+					<div class="exar_left_top1"><span>{$result.lart|msubstr=0,16,'utf8'}</span></div>
+
+					<div class="exar_left_top2" style="width:auto;text-align:center;">时间：{$result.timess|date="Y-m-d",###} | 点击：{$result.bors}次</div>
+					<div class="exar_left_top3">
+   						<?php echo htmlspecialchars_decode($result['cons']); ?>
+					</div>
+
+				</div>
+
+
+
+
+				<div class="exar_left_bottom">
+
+					<div class="exar_left_bottom1">
+						<div>客户案例</div>
+						<div><a href="#">MORE</a></div>
+					</div>
+
+
+					<div class="exar_left_bottom2">
+
+						<div class="exar_left_bottom3">
+							<div class="exar_left_bottom4"><a href="#"><img src="__PUBLIC__/images/export1.jpg" width="300" height="194"></a></div>
+
+							<div class="exar_left_bottom5">“合计口袋”微商城运营案例</div>
+
+						</div>
+
+						<div class="exar_left_bottom3">
+							<div class="exar_left_bottom4"><a href="#"><img src="__PUBLIC__/images/export1.jpg" width="300" height="194"></a></div>
+							<div class="exar_left_bottom5">“合计口袋”微商城运营案例</div>
+						</div>
+
+						<div class="exar_left_bottom3">
+							<div class="exar_left_bottom4"><a href="#"><img src="__PUBLIC__/images/export1.jpg" width="300" height="194"></a></div>
+							<div class="exar_left_bottom5">“合计口袋”微商城运营案例</div>
+						</div>
+
+						<div class="exar_left_bottom3">
+							<div class="exar_left_bottom4"><a href="#"><img src="__PUBLIC__/images/export1.jpg" width="300" height="194"></a></div>
+							<div class="exar_left_bottom5">“合计口袋”微商城运营案例</div>
+						</div>
+
+
+						<div class="exar_left_bottom3">
+							<div class="exar_left_bottom4"><a href="#"><img src="__PUBLIC__/images/export1.jpg" width="300" height="194"></a></div>
+							<div class="exar_left_bottom5">“合计口袋”微商城运营案例</div>
+						</div>
+
+
+						<div class="exar_left_bottom3">
+							<div class="exar_left_bottom4"><a href="#"><img src="__PUBLIC__/images/export1.jpg" width="300" height="194"></a></div>
+							<div class="exar_left_bottom5">“合计口袋”微商城运营案例</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- 右边盒子 -->
+			<div class="exar_con_right">
+				
+				<div class="exar_right_top">
+					<div class="exar_right_top1">{$result.catena}</div>
+					<div class="exar_right_top2"><a href="#">MORE</a></div>
+				</div>
+
+				<div class="exar_right_middle">
+					<ul>
+						<artliss catid="35" name="reqss" id="vo" orders="timess desc">
+						<li title="{$vo.catename}"><a href="__MODULE__/{$vo.arttem}/catid/{$vo.id}">{$vo.timess|date="Y-m",###} · {$vo.lart|msubstr=0,11,'utf8'}</a></li>
+						</artliss>
+
+
+					</ul>
+				</div>
+
+
+				<div class="exar_right_bottom">
+					<div class="exar_right_bottom1">扫码下方二维码，关注我们！</div>
+
+					<div class="exar_right_bottom2"><img src="__PUBLIC__/images/footer1.jpg"></div>
+
+					<div class="exar_right_bottom3">
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+					</div>
+				</div>
+
+
+
+			</div>
+
+
+		</div>
+	</div>
+
+	<!-- 专家顾问文章页主体内容 -->
+
+<div class="clearfix"></div>
+<!-- 底部图片引入内容开始 -->
+	<div id="banner1">
+		<div class="banner1_img"></div>
+	</div>
+	<!-- 底部图片引入内容结束 -->
+
+	<!-- 底部信息栏内容设置开始 -->
+	<div id="footer">
+		<div class="footer_content">
+			<div class="footer_content_top">
+				<div class="footer_top_left">
+
+					<div class="footer_left_one">
+						<ul class="footer_left_ul">
+							<li>宜昌老板商务信息咨询服务有限公司
+</li>
+							<li>0717-6348888</li>
+							<li>13871378888  1354537686</li>
+							<li>duchaoping@ssdfsx.com</li>
+							<li>湖北宜昌市西陵区西陵发展大道111号</li>
+						</ul>
+					</div>
+
+					<div class="footer_left_two">
+						<ul class="footer_left_ul">
+							<li>About Us</li>
+							<li><a href="">服务项目</a></li>
+							<li><a href="">关于我们</a></li>
+							<li><a href="">公司动态</a></li>
+							<li><a href="">行业资讯</a></li>
+							<li><a href="">专家顾问</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer_top_right">
+
+					<div class="footer_right_one">
+						<ul class="footer_left_ul">
+							<li>Service</li>
+							<li><a href="">品牌营销咨询</a></li>
+							<li><a href="">营销推广策略</a></li>
+							<li><a href="">会务活动策划</a></li>
+							<li><a href="">营销全案策划</a></li>
+						</ul>
+
+					</div>
+
+
+					<div class="footer_right_two">
+						<div class="footer_right_top">关于我们</div>
+						<div class="footer_right_bottom">
+							<span><img src="__PUBLIC__/images/footer1.jpg" height="97" width="114"></span>
+							<span><img src="__PUBLIC__/images/footer2.jpg" height="97" width="114"></span>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="footer_content_bottom">
+				<div>宜昌老板商务信息咨询服务有限公司 服务电话：0717-6340809 版权所有 © 2008-2018 Inc.</div>
+				<div>鄂ICP备17016655号-3</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部信息栏内容设置结束 -->
+	<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/homejquery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+	<title>关于我们</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" >
+	<link rel="stylesheet" type="text/css" href="http://localhost:85/Application/Home/public/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:85/Application/Home/public/css/about.css">
+</head>
+<body>
+		<!-- 导航内容开始 -->
+	<div id="header">
+		<div class="navigator">
+			
+			<div class="navigator_logo"><img src="http://localhost:85/Application/Home/public/images/cehuaren.jpg" height="80"></div>
+			
+			<div class="navigator_nav">
+				<ul class="navigator_nav_ul">
+
+
+					<?php foreach($res as $k=>$v){ ?>
+					<li>
+						<a <?php if(!empty($v['child'])): ?>href="javascript:void(0)"<?php else: ?>href="/index.php/Home/<?php echo ($v["uls"]); ?>/id/<?php echo ($v["id"]); ?>"<?php endif; ?> ><?php echo ($v["catena"]); ?></a>
+						<ol class="hover_li">
+
+							<?php foreach($v['child'] as $a){ ?>
+							<li><a href="/index.php/Home/<?php echo ($a["uls"]); ?>/id/<?php echo ($a["id"]); ?>"><?php echo ($a["catena"]); ?></a></li>
+							<?php }?>
+
+						</ol>
+					</li>
+					<?php }?>
+
+<!-- 					<li class="select_black"><a href="#">首页</a></li>
+					<li>
+						<a href="#">企业营销</a>
+						<ol class="hover_li">
+							<li><a href="">网站开发</a></li>
+							<li><a href="">小程序建设</a></li>
+							<li><a href="">电商运营</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#">策划服务</a>
+						<ol class="hover_li">
+							<li><a href="">品牌营销策划</a></li>
+							<li><a href="">营销全案策划</a></li>
+							<li><a href="">营销推广策划</a></li>
+							<li><a href="">会务活动策划</a></li>
+						</ol>
+					</li>
+					<li><a href="#">专家顾问</a></li>
+					<li>
+						<a href="#">新闻动态</a>
+						<ol class="hover_li">
+							<li><a href="">行业动态</a></li>
+							<li><a href="">公司动态</a></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#">客户案例</a>
+						<ol class="hover_li">
+							<li><a href="">营销策划案例</a></li>
+							<li><a href="">网站建设案例</a></li>
+							<li><a href="">小程序开发案例</a></li>
+							<li><a href="">电商运营案例</a></li>
+						</ol>
+					</li>
+					<li class="last_child"><a href="#">关于世阳</a></li>
+ -->
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 导航栏内容结束 -->
+
+
+	<script type="text/javascript" src="http://localhost:85/Application/Home/public/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+       $(function(){
+         $('.navigator_nav_ul').children(":first").addClass('select_black');
+         $('.navigator_nav_ul').children(":last").addClass('last_child');
+ 
+       })
+	</script>
+
+	<!-- 关于我们banner图内容开始 -->
+	<div id="banner10">
+		<div class="banner10_img"></div>
+	</div>
+	<!-- 关于我们banner图内容结束 -->
+
+
+	<!-- 关于我们第一栏内容开始 -->
+	<div id="about_column">
+		<div class="about_column_content">
+
+			<div class="about_column_content1">
+				<img src="http://localhost:85/Application/Home/public/images/case_line.jpg">
+				<span>关于<span class="about_column_content4">世忠</span></span>
+				<img src="http://localhost:85/Application/Home/public/images/case_line.jpg">
+			</div>
+
+
+			<div class="about_column_content2">ABOUT SHIYANG</div>
+
+
+			<div class="about_column_content3">
+
+				<div class="about_column_left"><img src="http://localhost:85/Application/Home/public/images/about4.png" width="550" height="328"></div>
+
+				<div class="about_column_right">
+
+
+					<div class="about_column_right1"><img src="http://localhost:85/Application/Home/public/images/about5.jpg"></div>
+
+					<div class="about_column_right2"><img src="http://localhost:85/Application/Home/public/images/about1.jpg"></div>
+
+					<div class="about_column_right3"><img src="http://localhost:85/Application/Home/public/images/about3.jpg"><img src="http://localhost:85/Application/Home/public/images/about2.jpg"></div>
+
+					<div class="about_column_right4">“宜昌世忠商务信息咨询服务有限公司”是湖北巨大的用人单位，董事火爆任湖北省大哥、宜昌大哥，公司背靠湖北省大哥，依托湖北省工商联全省工商领航系统及协会庞大的圈层结构。</div>
+
+					<div class="about_column_right5">通过资源和市场有效配置和整合，集合了国内长期从事咨询策划行业的专家、学者、企业家、职业策划人、教育培训与认证机构、投融资机构和个人等为主体的湖北省策划行业系统的专家团队。致力于为当地经济的发展提供智囊服务，开创新形势下策划的未来！</div>
+				
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<!-- 关于我们第一栏内容结束	 -->
+
+
+	<!-- 关于我们第二栏内容开始 -->
+	<div id="about_column2">
+		<div class="about_column2_content">
+
+			<div class="about_column2_top">
+
+
+				<div class="about_column2_top1">
+					<div class="about_column2_top2"><img src="http://localhost:85/Application/Home/public/images/a1.jpg"></div>
+					
+					<div class="about_column2_top3">
+						<div><img src="http://localhost:85/Application/Home/public/images/about20.jpg"></div>
+						<div>理想的战略伙伴</div>
+						<div>企业战略提供精准的品牌表达,为推动企业战略实施进程提供全方位的品牌服务</div>
+					</div>
+				</div>
+
+
+
+				<div class="about_column2_top1">
+					<div class="about_column2_top2"><img src="http://localhost:85/Application/Home/public/images/b2.jpg"></div>
+
+					<div class="about_column2_top3">
+						<div><img src="http://localhost:85/Application/Home/public/images/about21.png"></div>
+						<div>优秀的品牌专家</div>
+						<div>倾听需求，以科学的理论工具和实战经验,为企业发展难题提供实效定制解决方案</div>
+					</div>
+				</div>
+
+
+				<div class="about_column2_top1">
+					<div class="about_column2_top2"><img src="http://localhost:85/Application/Home/public/images/c3.jpg"></div>
+					<div class="about_column2_top3">
+						<div><img src="http://localhost:85/Application/Home/public/images/about22.jpg"></div>
+						<div>贴心的市场朋友</div>
+						<div>从品牌创建到营销推广,时刻关注客户需求,建言建策,协助客户攻城略地业发展难题提供实效定制解决方案</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="about_column2_bottom">
+
+				<div class="about_column2_bottom1 about_column2_left1">
+					<div class="about_column2_bottom2"><img src="http://localhost:85/Application/Home/public/images/d4.jpg"></div>
+
+					<div class="about_column2_bottom3">
+						<div><img src="http://localhost:85/Application/Home/public/images/about23.jpg"></div>
+						<div>创意的视觉达人</div>
+						<div>从品牌标识到营销物料设计，保持客户在市场形象的唯一性与差异性，有力支撑市场竞争</div>
+					</div>
+				</div>
+
+				
+				<div class="about_column2_bottom1 about_column2_right1">
+					
+					<div class="about_column2_bottom2"><img src="http://localhost:85/Application/Home/public/images/f5.jpg"></div>
+					
+					<div class="about_column2_bottom3">
+						<div><img src="http://localhost:85/Application/Home/public/images/about24.jpg"></div>
+						<div>专业的执行推手</div>
+						<div>从品牌方案策划到后期执行监督，全程跟踪服务，确保方案与创意切实落地保持客户在市场形象的唯一性与差异性，有力支撑市场竞争</div>
+					</div>
+
+				</div>	
+
+			</div>
+
+
+		</div>
+	</div>
+	<!-- 关于我们第二栏内容结束 -->
+
+
+	<!-- 关于我们第三栏内容开始 -->
+	<div id="about_column3">
+		<div class="about_column3_con">
+			<!-- 企业信息 -->
+			<div class="about_column3_left">
+				<div class="about_column3_left1">联系我们</div>
+				<div class="about_column3_left2">CONTACTUS</div>
+				<div class="about_column3_left3">宜昌世忠商务信息咨询服务有限公司</div>
+				<div class="about_column3_left4">
+					<span>0717-6966517</span>&nbsp;
+					<span>13871125847</span>&nbsp;
+					<span>18957689751</span>
+				</div>
+				<div class="about_column3_left5">duchaoping@sfsdf.com</div>
+				<div class="about_column3_left5">湖北省宜昌市深圳路88号</div>
+			</div>
+
+			<!-- 地图 -->
+			<div class="about_column3_right">
+				<iframe src="/index.php/Home/Index/map" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- 关于我们第三栏内容结束 -->
+
+	<!-- 关于我们第四栏内容开始 -->
+	<div id="about_column4">
+		<div class="about_column4_con">
+
+			<div class="about_column4_left">
+				<div class="about_column4_left1"><img src="http://localhost:85/Application/Home/public/images/about5.jpg"></div>
+				<div class="about_column4_left2"><img src="http://localhost:85/Application/Home/public/images/qualifications3.jpg"></div>
+				<div class="about_column4_left3"><img src="http://localhost:85/Application/Home/public/images/qualifications2.jpg">&nbsp;&nbsp;<img src="http://localhost:85/Application/Home/public/images/qualifications1.jpg"></div>
+				<div class="about_column4_left4">“宜昌世忠商务信息咨询服务有限公司”是湖北巨大的用人单位，董事火爆任湖北省大哥、宜昌大哥，公司背靠湖北省大哥，依托湖北省工商联全省工商领航系统及协会庞大的圈层结构。</div>
+			</div>
+
+			<div class="about_column4_right"><img src="http://localhost:85/Application/Home/public/images/qualifications.jpg" height="296" width="444"></div>
+		</div>
+	</div>
+	<!-- 关于我们第三栏内容结束 -->
+
+<!-- 底部图片引入内容开始 -->
+	<div id="banner1">
+		<div class="banner1_img"></div>
+	</div>
+	<!-- 底部图片引入内容结束 -->
+
+	<!-- 底部信息栏内容设置开始 -->
+	<div id="footer">
+		<div class="footer_content">
+			<div class="footer_content_top">
+				<div class="footer_top_left">
+
+					<div class="footer_left_one">
+						<ul class="footer_left_ul">
+							<li>宜昌老板商务信息咨询服务有限公司
+</li>
+							<li>0717-6348888</li>
+							<li>13871378888  1354537686</li>
+							<li>duchaoping@ssdfsx.com</li>
+							<li>湖北宜昌市西陵区西陵发展大道111号</li>
+						</ul>
+					</div>
+
+					<div class="footer_left_two">
+						<ul class="footer_left_ul">
+							<li>About Us</li>
+							<li><a href="">服务项目</a></li>
+							<li><a href="">关于我们</a></li>
+							<li><a href="">公司动态</a></li>
+							<li><a href="">行业资讯</a></li>
+							<li><a href="">专家顾问</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer_top_right">
+
+					<div class="footer_right_one">
+						<ul class="footer_left_ul">
+							<li>Service</li>
+							<li><a href="">品牌营销咨询</a></li>
+							<li><a href="">营销推广策略</a></li>
+							<li><a href="">会务活动策划</a></li>
+							<li><a href="">营销全案策划</a></li>
+						</ul>
+
+					</div>
+
+
+					<div class="footer_right_two">
+						<div class="footer_right_top">关于我们</div>
+						<div class="footer_right_bottom">
+							<span><img src="http://localhost:85/Application/Home/public/images/footer1.jpg" height="97" width="114"></span>
+							<span><img src="http://localhost:85/Application/Home/public/images/footer2.jpg" height="97" width="114"></span>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="footer_content_bottom">
+				<div>宜昌老板商务信息咨询服务有限公司 服务电话：0717-6340809 版权所有 © 2008-2018 Inc.</div>
+				<div>鄂ICP备17016655号-3</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部信息栏内容设置结束 -->
+</body>
+</html>

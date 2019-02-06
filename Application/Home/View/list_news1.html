@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>行业动态</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge" >
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/news.css">
+</head>
+<body>
+	<include file="./Application/Home/View/head.html" />
+
+	<!-- 行业动态banner图内容开始 -->
+
+	<div id="banner13">
+		<div class="banner13_img"></div>
+	</div>
+
+	<!-- 行业动态banner图内容结束 -->
+
+	<!-- 第一部分 -->
+	<div id="case4">
+		<div class="case4_by_top">
+			<img src="__PUBLIC__/images/case_line.jpg"/>
+			 新闻<span>动态</span>
+			<img src="__PUBLIC__/images/case_line.jpg"/>
+		</div>
+
+		<div class="case4_by_middle">NEWS INFORMATION</div>
+	</div>
+	<!-- 第一部分 -->
+
+
+	<!-- 第二部分 -->
+	<div id="new1_one">
+		<div class="new1_one1">
+			<div class="new1_one_con">
+
+
+				<div class="new1_one_con1">
+					<a href="case1.html"  class="new1_one_con2">
+						<span>公司动态</span>
+						<span><img src="__PUBLIC__/images/case_img.png"></span>
+					</a>
+				</div>
+
+
+
+				<div class="new1_one_con1">
+					<a href="case2.html" class="new1_one_con2">
+						<span>行业动态</span>
+						<span class="new1_select"><img src="__PUBLIC__/images/case_img.png"></span>
+					</a>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<!-- 第二部分 -->
+
+	<!-- 第三部分 -->
+	<div id="new1_two">
+		<div class="new1_two_top">
+
+
+
+
+			<volist name="ress" id="vo">
+ 			<div class="new1_top_con">
+				<div class="new1_two_left"><a href="#"><img src="__PUBLIC__/images/haila.jpg" width="290" height="120"></a></div>
+				<div class="new1_two_right">
+					<div class="new1_two_right1">
+						<a href="#">{$vo.tite}</a>
+					</div>
+					<div class="new1_two_right2">{$vo.descc}</div>
+					<div class="new1_two_right3">{$vo.tims|date="Y.m.d",###}</div>
+				</div>
+			</div>
+			</volist>
+
+		</div>
+				<!-- 分页 -->
+		<div class="new1_two_bottom">
+
+       {$fenye}
+
+		</div>
+
+	</div>
+
+	<!-- 第三部分 -->
+	<!-- 底部图片引入内容开始 -->
+	<div id="banner1">
+		<div class="banner1_img"></div>
+	</div>
+	<!-- 底部图片引入内容结束 -->
+<!-- 底部信息栏内容设置开始 -->
+	<div id="footer">
+		<div class="footer_content">
+			<div class="footer_content_top">
+				<div class="footer_top_left">
+
+					<div class="footer_left_one">
+						<ul class="footer_left_ul">
+							<li>宜昌老板商务信息咨询服务有限公司
+</li>
+							<li>0717-6348888</li>
+							<li>13871378888  1354537686</li>
+							<li>duchaoping@ssdfsx.com</li>
+							<li>湖北宜昌市西陵区西陵发展大道111号</li>
+						</ul>
+					</div>
+
+					<div class="footer_left_two">
+						<ul class="footer_left_ul">
+							<li>About Us</li>
+							<li><a href="">服务项目</a></li>
+							<li><a href="">关于我们</a></li>
+							<li><a href="">公司动态</a></li>
+							<li><a href="">行业资讯</a></li>
+							<li><a href="">专家顾问</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer_top_right">
+
+					<div class="footer_right_one">
+						<ul class="footer_left_ul">
+							<li>Service</li>
+							<li><a href="">品牌营销咨询</a></li>
+							<li><a href="">营销推广策略</a></li>
+							<li><a href="">会务活动策划</a></li>
+							<li><a href="">营销全案策划</a></li>
+						</ul>
+
+					</div>
+
+
+					<div class="footer_right_two">
+						<div class="footer_right_top">关于我们</div>
+						<div class="footer_right_bottom">
+							<span><img src="__PUBLIC__/images/footer1.jpg" height="97" width="114"></span>
+							<span><img src="__PUBLIC__/images/footer2.jpg" height="97" width="114"></span>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="footer_content_bottom">
+				<div>宜昌老板商务信息咨询服务有限公司 服务电话：0717-6340809 版权所有 © 2008-2018 Inc.</div>
+				<div>鄂ICP备17016655号-3</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部信息栏内容设置结束 -->
+
+
+</body>
+</html>

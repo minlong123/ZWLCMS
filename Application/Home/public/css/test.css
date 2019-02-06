@@ -1,0 +1,8 @@
+.b{
+	border-radius:50%;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:flex;
+}

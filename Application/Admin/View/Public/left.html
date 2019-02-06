@@ -1,0 +1,54 @@
+<div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="javascript:void(0)">分类管理</a>
+          <dl class="layui-nav-child">
+
+            {:tpl_AuthCheck('Cat/index',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Cat/index">分类管理</a></dd>','')}
+
+            {:tpl_AuthCheck('Cat/add',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Cat/add">添加分类</a></dd>','')}
+
+            {:tpl_AuthCheck('Arts/index',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Arts/index">文章管理</a></dd>','')}
+
+          </dl>
+        </li>
+
+
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="javascript:void(0)">权限管理</a>
+          <dl class="layui-nav-child">
+
+            {:tpl_AuthCheck('Jurisdiction/index',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Jurisdiction/index">用户管理</a></dd>','')}
+
+
+            {:tpl_AuthCheck('Jurisdiction/groups',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Jurisdiction/groups">创建用户组</a></dd>','')}
+
+          </dl>
+        </li>
+
+
+
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="javascript:void(0)">基础功能</a>
+          <dl class="layui-nav-child">
+
+            {:tpl_AuthCheck('Mesgs/index',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Mesgs/index">留言管理</a></dd>','')}
+
+
+            {:tpl_AuthCheck('Roll/index',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Roll/index">滚动消息管理</a></dd>','')}
+
+            {:tpl_AuthCheck('Caross/index',$_SESSION['idsss'],'or','<dd><a href="__MODULE__/Caross/index">轮播图管理</a></dd>','')}
+
+          </dl>
+        </li>
+ 
+      </ul>
+    </div>
+  </div>
+<!--   <script type="text/javascript">
+      var ss=document.querySelectorAll('.layui-nav-itemed');
+      console.log(ss);
+  </script> -->

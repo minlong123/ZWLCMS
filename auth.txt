@@ -1,0 +1,52 @@
+Cat/index   分类显示7
+Cat/add    分类添加7
+Cat/delete   分类删除7
+Cat/edit   分类修改7
+
+
+Cat/lists   分类数据接口7
+Cat/editCell  分类表格可编辑7
+
+
+Arts/index    文章显示5
+Arts/add   文章添加5
+Arts/lists   文章数据接口5
+Arts/edit   文章修改5
+Arts/delete   文章删除5
+Arts/deleteRow  多文章删除5
+Arts/uploads   文章图片上传5
+
+Caross/index   轮播图显示6
+Caross/add   轮播图添加6
+Caross/lists   轮播图数据接口6
+Caross/edit   轮播图修改6
+Caross/delete  轮播图删除6
+Caross/deleteRow  多轮播图删除6
+Caross/uploads   轮播图上传6
+
+Emais/index   邮箱配置显示8
+Emais/emaiest  邮箱测试接口8
+
+Jurisdiction/index   管理员显示9
+Jurisdiction/lists  管理员数据接口9
+Jurisdiction/delete   管理员删除9
+Jurisdiction/divide  用户组划分9
+Jurisdiction/groups   用户组管理9
+Jurisdiction/listss   用户组数据接口9
+Jurisdiction/deletes   用户组删除9
+Jurisdiction/AssignAuthority   用户权分配权限9
+
+
+Mesgs/index   留言板显示10
+Mesgs/lists    留言数据接口10
+Mesgs/delete    留言删除10
+Mesgs/deleteRow  多留言删除10
+Mesgs/switcEmail    留言邮件提醒10
+
+Roll/index   滚动消息显示11
+Roll/add    滚动数据添加11
+Roll/lists   滚动数据接口11
+Roll/deleteRow  滚动数据删除11
+
+
+短信权限尚未添加，后面一律请用超级管理员调试

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>后台管理系统</title>
+  <link rel="stylesheet" href="__PUBLIC__/css/layui.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/common.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+  <include file="Public/head" />
+  
+  <include file="Public/left" />
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <div style="padding: 15px;">
+      <span class="layui-breadcrumb">
+        <a href="__MODULE__/Index/index">控制台</a>
+        <a><cite>邮箱配置</cite></a>
+      </span>
+    </div>
+
+
+<div class="layui-container">  
+  <div class="layui-row">
+    <div class="layui-col-md6">
+      
+<blockquote class="layui-elem-quote">发件人邮箱账号：<span style="color:#FF5722">{$confiss[0]['sendemil']|default="尚未配置"}</span></blockquote>
+<blockquote class="layui-elem-quote">发件人用于登录第三方邮件客户端的专用密码：<span style="color:#FF5722">{$confiss[0]['sendpass']|default="尚未配置"}</span></blockquote>
+<blockquote class="layui-elem-quote">发件人昵称：<span style="color:#FF5722">{$confiss[0]['sendrena']|default="尚未配置"}</span></blockquote>
+<blockquote class="layui-elem-quote">收件人邮箱账号：<span style="color:#FF5722">{$confiss[0]['shouemil']|default="尚未配置"}</span></blockquote>
+
+    </div>
+    <div class="layui-col-md6">
+
+<div style="text-align: center;
+    margin-bottom:14px;"><span class="layui-badge layui-bg-cyan">发送测试</span></div>
+
+<form class="layui-form layui-formss" action="" method="post">
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">发件标题:</label>
+    <div class="layui-input-block">
+      <input type="text" name="tits" autocomplete="off" placeholder="请输入要测试的待发邮件标题" class="layui-input">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">发送内容:</label>
+    <div class="layui-input-block">
+      <textarea class="layui-textarea" name="conn" placeholder="请输入要测试的内容"></textarea>
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit="" lay-filter="demo2">立即发送</button>
+    </div>
+  </div>
+</form>
+
+    </div>
+  </div>
+
+
+<blockquote style="text-align:center;color:red;" class="layui-elem-quote layui-quote-nm">用于接收邮箱的邮箱账号(需要将发邮箱的账号设置为受信任列表中,以免进入垃圾箱,而无法接收到邮件)</blockquote>
+
+
+<form class="layui-form" action="" method="post">
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">发件人邮箱:</label>
+    <div class="layui-input-block">
+      <input type="text" name="sendemil" lay-verify="email" autocomplete="off" placeholder="请输入发件人的邮箱账户" value="{$confiss[0]['sendemil']}" class="layui-input">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">登陆授权码:</label>
+    <div class="layui-input-block">
+      <input type="text" name="sendpass" value="{$confiss[0]['sendpass']}" autocomplete="off" placeholder="请输入发件人邮箱的第三方登陆授权码" class="layui-input">
+      <input type="hidden" name="id" value="{$confiss[0]['id']}">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">发件人昵称:</label>
+    <div class="layui-input-block">
+      <input type="text" name="sendrena" value="{$confiss[0]['sendrena']}" autocomplete="off" placeholder="请输入发送邮件时会显示的昵称" class="layui-input">
+    </div>
+  </div>
+
+  <div class="layui-form-item">
+    <label class="layui-form-label">收件人邮箱:</label>
+    <div class="layui-input-block">
+      <input type="text" name="shouemil" value="{$confiss[0]['shouemil']}" lay-verify="email" autocomplete="off" placeholder="请输入接收邮件的账号" class="layui-input">
+    </div>
+  </div>
+
+
+
+
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit="" lay-filter="demo1">立即配置</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+
+
+  </div>
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+      备案相关信息
+  </div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/layui.all.js"></script>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script>
+
+layui.use(['form','element', 'layedit', 'laydate'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate
+  ,ele=layui.element;
+  
+  //监听提交，提交后，检索关键几个字段的值是否存在，如果不存在，则使用ajax方式提交
+  // 邮箱信息配置
+  form.on('submit(demo1)', function(data){
+    if(data.field.sendemil==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '发件邮箱不能为空'
+      });
+    }else if(data.field.sendpass==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '发件授权码不能为空'
+      });
+    }else if(data.field.sendrena==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '发件昵称不能为空'
+      });
+    }else if(data.field.shouemil==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '收件人邮箱不能为空'
+      });
+    }else{
+      $.ajax({
+        url:'__CONTROLLER__/index',
+        type:'post',
+        data:$('.layui-form').serialize(),
+        dataType:"json",
+        success:function(data){
+          layer.msg(data.info,{
+            anim: 2,
+            time:2000
+          },function(){
+            window.location.href=data.url;
+          });
+        },
+        error:function(data){
+          layer.open({
+            title: '提交信息'
+            ,content: data.info
+          });
+        }
+
+      })
+    }
+    return false;
+  });
+ 
+  
+  // 发送邮件测试
+  form.on('submit(demo2)', function(datas){
+    if(datas.field.tits==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '请填写发送的标题再点击测试'
+      });
+    }else if(datas.field.conn==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '请填写发送的内容再点击测试'
+      });
+    }else{
+      $.ajax({
+        url:'__CONTROLLER__/emaiest',
+        type:'post',
+        data:$('.layui-formss').serialize(),
+        dataType:"json",
+        success:function(dataa){
+
+          layer.msg(dataa.info,{
+            anim: 2,
+            time:2000
+          },function(){
+            window.location.href=data.url;
+          });
+        },
+        error:function(dataa){
+          layer.open({
+            title: '提交信息'
+            ,content: dataa.info
+          });
+        }
+
+      })
+    }
+    return false;
+  });
+
+
+
+  
+});
+</script>
+
+
+</body>
+</html>

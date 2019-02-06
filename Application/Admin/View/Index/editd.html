@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>后台管理系统-管理员信息修改</title>
+  <link rel="stylesheet" href="__PUBLIC__/css/layui.css">
+  <link rel="stylesheet" href="__PUBLIC__/css/common.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+
+  <include file="Public/head" />
+  
+  <include file="Public/left" />
+  
+  <div class="layui-body">
+    <!-- 内容主体区域 -->
+    <div style="padding: 15px;">
+      <span class="layui-breadcrumb">
+        <a href="__CONTROLLER__/index">控制台</a>
+        <a><cite>管理员信息修改</cite></a>
+      </span>
+      <form class="layui-form layui-form-pane editfm" method="post">
+
+        <div class="layui-form-item">
+          <div class="layui-inline">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+              <input type="text" value="{$_SESSION['adminuser']}" name="adminuser" id="date1" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+
+          <div class="layui-inline">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-inline">
+              <input type="password" placeholder="不修改默认为原密码" name="adminpwd" autocomplete="off" class="layui-input">
+            </div>
+          </div>
+
+
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+              <button class="layui-btn" lay-submit lay-filter="demo1">立即提交</button>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </form>
+
+
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+      备案相关信息
+  </div>
+</div>
+<script src="__PUBLIC__/layui.all.js"></script>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+
+<script>
+layui.use(['form', 'layedit', 'laydate'], function(){
+  var form = layui.form
+  ,layer = layui.layer
+  ,layedit = layui.layedit
+  ,laydate = layui.laydate;
+  
+  //监听提交，提交后，检索关键几个字段的值是否存在，如果不存在，则使用ajax方式提交
+  form.on('submit(demo1)', function(data){
+    console.log(data);
+    if(data.field.adminuser==''){
+      layer.open({
+        title: '提交信息'
+        ,content: '管理员账户不能为空'
+      });
+    }else{
+      $.ajax({
+        url:'__CONTROLLER__/editd',
+        type:'post',
+        data:$('.layui-form').serialize(),
+        dataType:"json",
+        success:function(data){
+          layer.msg(data.info,{
+            anim: 2,
+            time:2000
+          },function(){
+            window.location.href=data.url;
+          });
+        },
+        error:function(data){
+          layer.open({
+            title: '提交信息'
+            ,content: data.info
+          });
+        }
+
+      })
+    }
+    return false;
+  });
+ 
+  
+  
+});
+</script>
+</body>
+</html>

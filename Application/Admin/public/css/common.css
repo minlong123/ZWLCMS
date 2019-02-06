@@ -1,0 +1,39 @@
+.login-form{width:100%;position:relative;margin-top:200px;}
+.login-form .layui-form-item{
+display:table;margin:0 auto;padding:5px;
+}
+.login-form .layui-form-item .layui-form-label{
+	width:100px;
+}
+.login-form .layui-form-item .layui-input-block{margin-left:0;}
+.login-form .layui-form-item .layui-form-mid{
+	margin-right:0;width:90px;
+}
+.editfm{margin-top:20px;}
+.addcate .layui-form-label{width:117px;}
+.addcate .layui-input-block{margin-left: 117px;}
+.layui-btn-sm{
+	padding: 5px 10px;
+    height: auto;
+    line-height: 1;
+}
+.add_imgss{
+	display: inline-block;
+    vertical-align: top;
+    height:135px;
+}
+.lay-das .layui-fluid{
+	 margin: 15px 0px 5px;
+}
+.layui-table .layui-table-cell{
+	height:auto;
+}
+.layui-uploadss .layui-card-header{
+	color:#009688;
+    font-weight:bold;
+    font-size: 18px;
+    color:#FFF;
+}
+.demoTable .layui-form-pane .layui-form-radio, .layui-form-pane .layui-form-switch{
+	margin-top:0!important;
+}

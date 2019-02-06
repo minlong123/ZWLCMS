@@ -1,0 +1,63 @@
+		/*定义的动画*/
+		@keyframes spin{
+				0%{transform:rotate(-90deg);}
+				100%{transform:rotate(0deg);}
+			}
+
+		@keyframes enlarge{
+				0%{transform:scale(1);}
+				5%{transform:scale(1.25);}
+				20%{transform:scale(0.75);}
+				40%{transform:scale(1.18);}
+				60%{transform:scale(0.9);}
+				80%{transform:scale(1.1);}
+				100%{transform:scale(1);}
+			}
+		@keyframes box2{
+				0%{transform:rotate(-180deg);}
+				100%{transform:rotate(0deg);}
+			}
+		@keyframes box3{
+				0%{transform:rotate(180deg);}
+				100%{transform:rotate(0deg);}
+			}
+		@keyframes box4{
+				0%{transform:rotate(-270deg);}
+				100%{transform:rotate(0deg);}
+			}
+		@keyframes box5{
+				0%{transform:rotate(270deg);}
+				100%{transform:rotate(0deg);}
+			}
+		@keyframes box6{
+				0%{transform:rotate(-360deg);}
+				100%{transform:rotate(0deg);}
+			}
+		@keyframes box7{
+				0%{transform:rotate(360deg);}
+				100%{transform:rotate(0deg);}
+			}
+		@keyframes box8{
+				0%{transform:scale(0);}
+				100%{transform:scale(5);}
+			}
+
+
+/*调用动画的类*/
+/*
+一、所有动画前，添加了动画的类的元素未出现在当前视口就先隐藏
+二、为确保类名添加元素上能起作用，自动将所有元素变成块状元素
+三、定义完成所有动画所需的时间
+四、要能重定义样式，比如我想让这个动画无限循环，我可以在引入这个类的html文件内，在添加一个无限循环的属性。这个由用户自己决定。
+五、尽可能考虑到各种可能会遇到的兼容问题，让没有webkit内核的浏览器能够兼容动画效果。
+	*/
+.spin{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;transform-origin:left bottom;}
+.enlarge{visibility:hidden;animation-fill-mode:both;animation-duration:0.85s;display:block;}
+.box2{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.box3{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.box4{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.box5{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.box6{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.box7{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.box8{visibility:hidden;animation-fill-mode:both;animation-duration:1s;display:block;}
+.ani{visibility:visible;}

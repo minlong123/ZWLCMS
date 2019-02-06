@@ -1,0 +1,35 @@
+<div class="layui-header">
+    <div class="layui-logo">致未来后台管理系统</div>
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="__MODULE__/Index/index">控制台</a></li>
+
+      <li class="layui-nav-item">
+        <a href="javascript:void(0);">
+          接口配置
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="__MODULE__/Emais/index">邮箱接口配置</a></dd>
+          <dd><a href="javascript:void(0)">公众号接口配置</a></dd>
+          <dd><a href="__MODULE__/Tels/index">短信接口配置</a></dd>
+        </dl>
+      </li>
+
+      <li class="layui-nav-item"><a href="javascript:void(0);" class="clearun">清除缓存</a></li>
+
+
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">上次登录时间：{$_SESSION['lastmap']|date="Y-m-d",###}</li>
+      
+      <li class="layui-nav-item">
+        <a href="javascript:void(0);">
+          管理员：<?php echo $_SESSION['adminuser'] ?>
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="__MODULE__/Index/editd">修改账户密码</a></dd>
+        </dl>
+      </li>
+
+      <li class="layui-nav-item"><a href="__MODULE__/Login/logout">退出</a></li>
+    </ul>
+  </div>
